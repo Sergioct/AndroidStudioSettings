@@ -3,13 +3,16 @@
     <#include "fragment_layout_recipe.xml.ftl" />
 
     <instantiate from="src/app_package/classes/Fragment.java.ftl"
-    to="${escapeXmlAttribute(srcOut)}/${className}Fragment.java" />
-    
-    <instantiate from="src/app_package/classes/Contract.java.ftl"
-    to="${escapeXmlAttribute(srcOut)}/${className}Contract.java" />
-    
+    to="${escapeXmlAttribute(srcOut)}/${fragmentName}.java" />
+       
     <instantiate from="src/app_package/classes/Presenter.java.ftl"
-    to="${escapeXmlAttribute(srcOut)}/${className}Presenter.java" />
+    to="${escapeXmlAttribute(srcOut)}/${presenterName}.java" />
 
-    <open file="${srcOut}/${className}Presenter.java"/>
+     <instantiate from="src/app_package/classes/Model.java.ftl"
+    to="${escapeXmlAttribute(srcOut)}/${modelName}.java" />
+
+    <instantiate from="src/app_package/classes/Contract.java.ftl"
+    to="${escapeXmlAttribute(srcOut)}/${contractName}.java" />
+
+    <open file="${srcOut}/${fragmentName}.java"/>
 </recipe>
