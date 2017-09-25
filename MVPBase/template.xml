@@ -6,22 +6,35 @@
     <category value="MVP" />
     <formfactor value="Mobile" />
     
-    <parameter id="className"
-        name="Activity Name"
+    <parameter id="activityName"
+        name="Base Activity Name"
         type="string"
         constraints="class|unique|nonempty"
-        default="ActivityName"
-        help="The name of the functionality that requires MVP views"/>
-    
-    <parameter
-        id="activityLayoutName"
-        name="Activity Layout Name"
+        default="BaseActivity"
+        help="The name of the base activity that requires MVP views"/>
+
+    <parameter id="fragmentName"
+        name="Base Fragment Name"
         type="string"
-        constraints="layout|unique|nonempty"
-        suggest="activity_${classToResource(className)}"
-        default="activity_custom"
-        help="The name of the layout to create for the fragment" />
+        constraints="class|unique|nonempty"
+        default="BaseFragment"
+        help="The name of the base fragment that requires MVP views"/>
+
+    <parameter id="presenterName"
+        name="Base Presenter Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="BasePresenter"
+        help="The name of the base presenter that requires MVP views"/>
+
+    <parameter id="contractName"
+        name="Base Contract Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="BaseContract"
+        help="The name of the base contact that requires MVP views"/>
     
     <globals file="globals.xml.ftl" />
     <execute file="recipe.xml.ftl" />
+    
 </template>

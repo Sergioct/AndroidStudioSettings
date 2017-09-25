@@ -1,6 +1,6 @@
 package ${packageName};
 
-import android.app.Activity;
+import android.app.Fragment;
 
 /**
  *
@@ -13,6 +13,6 @@ import android.app.Activity;
  *
  */
 
-public class ${activityName} extends Activity implements ${contractName}.View {
+public class ${fragmentName} extends Fragment {
 
 }
