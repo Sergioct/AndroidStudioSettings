@@ -1,12 +1,10 @@
-# AndroidStudioSettings
+# Folders
 
-Folders
-
-Windows
+## Windows
 
 {ANDROID_STUDIO_LOCATION}/plugins/android/lib/templates/other/
 
 
-MacOS
+## MacOS
 
 /Applications/Android Studio.app/Contents/plugins/android/lib/templates/other/
