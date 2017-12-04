@@ -1,6 +1,10 @@
 # Android Studio Settings
 
-## Template
+## Live Templates Commands
+
+
+
+## Templates
 
 #### Windows
 
@@ -11,27 +15,17 @@
 
 /Applications/Android Studio.app/Contents/plugins/android/lib/templates/other/
 
-### MVP Base
+## MVP Base
 
 #### Dependencies
   * MVP
-  * Dagger 2
+  * Dagger 2 
   * Retrofit
-  * Room
   * JavaRx
 
 #### Hierarchy
 
 ```
-+-- database
-|   +-- entity
-|       - User
-|       - UserDao
-|   +-- repository
-|       - UserDataSource
-|       - UserRepository
-|   - DataSource
-|   - MyRoomDatabase
 +-- di
 |   +-- components
 |       - AppComponent
@@ -39,7 +33,6 @@
 |       - ActivityBindingModule // Not used, dagger-android class
 |       - ActivityModule
 |       - AppModule
-|       - DbModule
 |       - FragmentModule
 |       - NetworkModule
 |       - PicassoModule
@@ -63,9 +56,10 @@
 - MyApplication
 ```
 
-### MVP Activity
+## MVP Activity
 
-### MVP Fragment
+
+## MVP Fragment
 
 
 ## Inspired
