@@ -72,9 +72,27 @@
 
 ## MVP Activity
 
+```
++-- feature
+|   - FeatureActivity
+|   - FeatureComponent
+|   - FeatureContact
+|   - FeatureModel
+|   - FeatureModule
+|   - FeaturePresenter
+```
 
 ## MVP Fragment
 
+```
++-- feature
+|   - FeatureFragment
+|   - FeatureComponent
+|   - FeatureContact
+|   - FeatureModel
+|   - FeatureModule
+|   - FeaturePresenter
+```
 
 ## Inspired
 
