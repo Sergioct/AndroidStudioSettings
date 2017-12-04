@@ -49,11 +49,25 @@
 |       - Post
 |   - ApiControllerRetrofit
 +-- ui
-|   +-- login
 |   +-- main
-|   +-- register
+|       - MainActivity
+|       - MainComponent
+|       - MainContact
+|       - MainModel
+|       - MainModule
+|       - MainPresenter
+|   +-- root
+|       - BaseActivity
+|       - BaseContract
+|       - BaseFragment
 |   +-- splash
-- MyApplication
+|       - SplashActivity
+|       - SplashComponent
+|       - SplashContact
+|       - SplashModel
+|       - SplashModule
+|       - SplashPresenter
+- NameApplication
 ```
 
 ## MVP Activity
