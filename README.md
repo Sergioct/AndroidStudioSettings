@@ -11,16 +11,16 @@
 
 /Applications/Android Studio.app/Contents/plugins/android/lib/templates/other/
 
-###MVP Base
+### MVP Base
 
-## Dependencies
+#### Dependencies
   * MVP
   * Dagger 2
   * Retrofit
   * Room
   * JavaRx
 
-## Hierarchy
+#### Hierarchy
 
 ```
 +-- database
@@ -63,9 +63,9 @@
 - MyApplication
 ```
 
-###MVP Activity
+### MVP Activity
 
-###MVP Fragment
+### MVP Fragment
 
 
 ## Inspired
