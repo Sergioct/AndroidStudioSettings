@@ -1,39 +1,18 @@
 <template format="4"
     revision="1"
     name="MVP Base"
-    description="Creates MVP Base classes">
+    description="Creates MVP Base project">
     
     <category value="MVP" />
     <formfactor value="Mobile" />
     
-    <parameter id="activityName"
-        name="Base Activity Name"
+    <parameter id="appName"
+        name="Application name"
         type="string"
         constraints="class|unique|nonempty"
-        default="BaseActivity"
-        help="The name of the base activity that requires MVP views"/>
+        default="MyApplication"
+        help="The name of the project"/>
 
-    <parameter id="fragmentName"
-        name="Base Fragment Name"
-        type="string"
-        constraints="class|unique|nonempty"
-        default="BaseFragment"
-        help="The name of the base fragment that requires MVP views"/>
-
-    <parameter id="presenterName"
-        name="Base Presenter Name"
-        type="string"
-        constraints="class|unique|nonempty"
-        default="BasePresenter"
-        help="The name of the base presenter that requires MVP views"/>
-
-    <parameter id="contractName"
-        name="Base Contract Name"
-        type="string"
-        constraints="class|unique|nonempty"
-        default="BaseContract"
-        help="The name of the base contact that requires MVP views"/>
-    
     <globals file="globals.xml.ftl" />
     <execute file="recipe.xml.ftl" />
     
