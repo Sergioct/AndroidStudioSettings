@@ -79,5 +79,5 @@
 - WakaTime
 - WIFI ADB ULTIMATE
 
-
+## Live Templates
 
