@@ -2,14 +2,14 @@
 
 ## Sergio CT Android Jetpack
 
-### Foundation
+#### Foundation
 - AndroidX
 - Anko
 - Android KTX
 - Multidex
 - Test
 
-### Architecture
+#### Architecture
 - Lifecycles
 - LiveData
 - Navigation
@@ -18,36 +18,36 @@
 - ViewModel
 - WorkManager
 
-### Behaviour
+#### Behaviour
 - Notifications
 - Permissions
 
-### UI
+#### UI
 - Animation & Transitions
 - Emoji
 - Picasso
 `Glide`
 
-### Debuging
+#### Debuging
 - Spock
 - Leak Canary
 - Fabric
 - Timber
 `Chuck`, `Scalpel`, `debug drawer`, `Stetho`
   
-### Reactive programming
+#### Reactive programming
 - RxJava 2/, 
 - RxAndroid
 `AutoDispose`
 
-### Network
+#### Network
 - Retrofit 2
 - OkHttp
 - Gson
 `Moshi`
 `Okio`
 
-### Utils
+#### Utils
 - Firebase
 - Date: `ThreetenABP`, Jodatime
 `Apollo GraphQL`
