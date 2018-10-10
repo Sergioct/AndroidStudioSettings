@@ -40,7 +40,7 @@
 `Chuck`, `Scalpel`, `debug drawer`, `Stetho`
   
 #### Reactive programming
-- RxJava 2/, 
+- RxJava 2
 - RxAndroid
 `AutoDispose`
 
