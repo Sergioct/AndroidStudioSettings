@@ -21,11 +21,14 @@
 #### Behaviour
 - Notifications
 - Permissions
+- EventBus (Broadcast communication)
 
 #### UI
+- Android vector drawable
 - Animation & Transitions
 - Emoji
 - Picasso
+- PhotoView (Zooming Android ImageView)
 `Glide`
 
 #### Debuging
@@ -33,6 +36,7 @@
 - Leak Canary
 - Fabric
 - Timber
+- Twilio (VideoChat)
 `Chuck`, `Scalpel`, `debug drawer`, `Stetho`
   
 #### Reactive programming
@@ -46,6 +50,11 @@
 - Gson
 `Moshi`
 `Okio`
+- OneSignal (Notification push)
+
+#### Monitization
+- Admob
+- Stripe
 
 #### Utils
 - Firebase
