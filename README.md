@@ -81,3 +81,28 @@
 
 ## Live Templates
 
+#### Gradle
+dependencies (Gradle dependencies)
+dependenciesk (Gradle dependencies Kotlin)
+
+#### Groovy
+- todo
+
+#### Layout
+- background_ripple (Button Ripple Animation)
+- llh (Linear Layout Horizontal)
+- llv (Linear Layout Vertical)
+- margins (All margins)
+- paddings (All paddings)
+- rl (Relative Layout)
+- rv (RecyclerView LinearLayoutManager)
+- tv (TextView)
+
+#### Spock
+- spockObservable
+- spockObservableError
+- spockTest
+- spockTestPresenter
+- spockUser
+
+
