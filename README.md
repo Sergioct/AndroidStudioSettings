@@ -64,6 +64,7 @@
 - Firebase
 - Date: `ThreetenABP`, Jodatime
 - `Apollo GraphQL`
+- `MvRx` [Link](https://github.com/airbnb/MvRx)
 
 ## Plugins
 - ADB Idea
@@ -79,9 +80,9 @@
 - Smooth Scroller
 - SonarLint
 - Statistic
-- String Manipulation
-- WakaTime
-- WIFI ADB ULTIMATE
+- [String Manipulation](https://plugins.jetbrains.com/plugin/2162-string-manipulation)
+- [WakaTime](https://wakatime.com/)
+- [WIFI ADB ULTIMATE](https://plugins.jetbrains.com/plugin/9207-wifi-adb-ultimate)
 
 ## Live Templates
 
