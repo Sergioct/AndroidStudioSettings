@@ -29,11 +29,11 @@
 - Emoji
 - Picasso
 - PhotoView (Zooming Android ImageView)
-`Glide`
-[Groupie](https://github.com/lisawray/groupie) for making RecyclerViews as simple as possible.
-[Epoxy](https://github.com/airbnb/epoxy) for making static RecyclerViews as efficient and nice as possible.
-`[Material Dialogs](https://github.com/afollestad/material-dialogs)` show dialogs in a simple and easy way.
-[Android Iconics](https://github.com/mikepenz/Android-Iconics) deal with icons without suffering.
+- `Glide`
+- [Groupie](https://github.com/lisawray/groupie) for making RecyclerViews as simple as possible.
+- [Epoxy](https://github.com/airbnb/epoxy) for making static RecyclerViews as efficient and nice as possible.
+- `[Material Dialogs](https://github.com/afollestad/material-dialogs)` show dialogs in a simple and easy way.
+- [Android Iconics](https://github.com/mikepenz/Android-Iconics) deal with icons without suffering.
 
 #### Debuging
 - Spock
@@ -41,19 +41,19 @@
 - Fabric
 - Timber
 - Twilio (VideoChat)
-`Chuck`, `Scalpel`, `debug drawer`, `Stetho`
+- `Chuck`, `Scalpel`, `debug drawer`, `Stetho`
   
 #### Reactive programming
 - RxJava 2
 - RxAndroid
-`AutoDispose`
+- `AutoDispose`
 
 #### Network
 - Retrofit 2
 - OkHttp
 - Gson
-`Moshi`
-`Okio`
+- `Moshi`
+- `Okio`
 - OneSignal (Notification push)
 
 #### Monitization
@@ -63,7 +63,7 @@
 #### Utils
 - Firebase
 - Date: `ThreetenABP`, Jodatime
-`Apollo GraphQL`
+- `Apollo GraphQL`
 
 ## Plugins
 - ADB Idea
