@@ -30,6 +30,10 @@
 - Picasso
 - PhotoView (Zooming Android ImageView)
 `Glide`
+[Groupie](https://github.com/lisawray/groupie) for making RecyclerViews as simple as possible.
+[Epoxy](https://github.com/airbnb/epoxy) for making static RecyclerViews as efficient and nice as possible.
+`[Material Dialogs](https://github.com/afollestad/material-dialogs)` show dialogs in a simple and easy way.
+[Android Iconics](https://github.com/mikepenz/Android-Iconics) deal with icons without suffering.
 
 #### Debuging
 - Spock
@@ -106,3 +110,6 @@ dependenciesk (Gradle dependencies Kotlin)
 - spockUser
 
 
+
+Ideas taken from:
+[SDK Monitor](https://github.com/bernaferrari/SDKMonitor)
