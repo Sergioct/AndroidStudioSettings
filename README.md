@@ -41,7 +41,8 @@
 - Fabric
 - Timber
 - Twilio (VideoChat)
-- `Chuck`, `Scalpel`, `debug drawer`, `Stetho`
+- `Chuck`, `Scalpel`, `debug drawer`, 
+- `Stetho` [Link](http://facebook.github.io/stetho/)
   
 #### Reactive programming
 - RxJava 2
@@ -58,10 +59,10 @@
 
 #### Monitization
 - Admob
-- Stripe
+- [Stripe](https://stripe.com/docs/mobile/android)
 
 #### Utils
-- Firebase
+- [Firebase](https://firebase.google.com/)
 - Date: `ThreetenABP`, Jodatime
 - `Apollo GraphQL`
 - `MvRx` [Link](https://github.com/airbnb/MvRx)
