@@ -84,6 +84,7 @@
 - [String Manipulation](https://plugins.jetbrains.com/plugin/2162-string-manipulation)
 - [WakaTime](https://wakatime.com/)
 - [WIFI ADB ULTIMATE](https://plugins.jetbrains.com/plugin/9207-wifi-adb-ultimate)
+- [Anko Support](https://plugins.jetbrains.com/plugin/7734-anko-support)
 
 ## Live Templates
 
