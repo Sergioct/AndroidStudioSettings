@@ -71,7 +71,7 @@
 - ADB Idea
 - Advanced Java Folding
 - Android Drawable Preview
-- CodeGlance
+- [CodeGlance](https://github.com/vektah/CodeGlance)
 - CPU Usage Indicator
 - Fabric for Android Studio
 - FindBugs-IDEA
@@ -85,6 +85,7 @@
 - [WakaTime](https://wakatime.com/)
 - [WIFI ADB ULTIMATE](https://plugins.jetbrains.com/plugin/9207-wifi-adb-ultimate)
 - [Anko Support](https://plugins.jetbrains.com/plugin/7734-anko-support)
+- [Detekt](https://github.com/arturbosch/detekt)
 
 ## Live Templates
 
