@@ -1,0 +1,7 @@
+<templateSet group="user">
+  <template name="&lt;abbreviation&gt;" value="&lt;android.support.v7.widget.RecyclerView&#10;                    android:id=&quot;@+id/recyclerView&quot;&#10;                    android:layout_width=&quot;match_parent&quot;&#10;                    android:layout_height=&quot;match_parent&quot;&#10;                    app:layoutManager=&quot;android.support.v7.widget.LinearLayoutManager&quot;&#10;                    tools:listitem=&quot;@layout/item_medical_profile&quot;/&gt;" description="" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+</templateSet>

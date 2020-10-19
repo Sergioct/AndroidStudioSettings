@@ -1,0 +1,32 @@
+<templateSet group="Sergioct Spock">
+  <template name="spockTestPresenter" value="def &quot;initialization presenter&quot;() {&#10;    when:&#10;    new MarketplaceProductFilterPresenter(view)&#10;&#10;    then:&#10;    1 * view.setTitle(&quot;&quot;)&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY" value="true" />
+    </context>
+  </template>
+  <template name="spockTest" value="def &quot;$METHOD_NAME$&quot;() {&#10;    setup:&#10;    def presenter = new $PRESENTER_NAME$(view, productFilter)&#10;&#10;    when:&#10;    presenter.$PRESENTER_METHOD_NAME$()&#10;&#10;    then:&#10;    1 * view.showLoadingProgress()&#10;}" description="Spock standard test" toReformat="false" toShortenFQNames="true">
+    <variable name="METHOD_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PRESENTER_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PRESENTER_METHOD_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GROOVY" value="true" />
+    </context>
+  </template>
+  <template name="spockObservable" value="def observable = Observable.create({ subscriber -&gt;&#10;            subscriber.onNext(Void)&#10;            subscriber.onCompleted()&#10;        } as Observable.OnSubscribe)&#10;        mService.$METHOD_NAME$(mUserManager.storedUser) &gt;&gt; observable" description="Spock observable" toReformat="false" toShortenFQNames="true">
+    <variable name="METHOD_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GROOVY" value="true" />
+    </context>
+  </template>
+  <template name="spockObservableError" value="Throwable throwable = new Throwable()&#10;def observable = Observable.create({ subscriber -&gt;&#10;    subscriber.onError(throwable)&#10;} as Observable.OnSubscribe)&#10;mService.$METHOD_NAME$(mUserManager.storedUser) &gt;&gt; observable" description="Spock observable error" toReformat="false" toShortenFQNames="true">
+    <variable name="METHOD_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GROOVY" value="true" />
+    </context>
+  </template>
+  <template name="spockUser" value="def user = new User([plan: User.Plan.Freemium])&#10;user.setAuthToken(&quot;auth-token&quot;)&#10;mUserManager.storedUser &gt;&gt; user" description="Spock observable error" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY" value="true" />
+    </context>
+  </template>
+</templateSet>

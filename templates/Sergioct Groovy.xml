@@ -1,0 +1,9 @@
+<templateSet group="Sergioct Groovy">
+  <template name="todo" value="// TODO: $date$ $todo$" description="// TODO: $date$ $todo$" toReformat="true" toShortenFQNames="true">
+    <variable name="date" expression="date()" defaultValue="" alwaysStopAt="false" />
+    <variable name="todo" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GROOVY" value="true" />
+    </context>
+  </template>
+</templateSet>

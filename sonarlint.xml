@@ -1,0 +1,9 @@
+<application>
+  <component name="SonarLintGlobalSettings">
+    <rules>
+      <Rule active="false" key="kotlin:S125" />
+      <Rule active="false" key="kotlin:S108" />
+      <Rule active="false" key="kotlin:S107" />
+    </rules>
+  </component>
+</application>

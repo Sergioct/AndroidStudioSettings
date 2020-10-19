@@ -1,0 +1,119 @@
+<templateSet group="Sergioct Kotlin">
+  <template name="delay" value="GlobalScope.launch {&#10;    delay($text$)&#10;}" description="Coroutine delay" toReformat="true" toShortenFQNames="true">
+    <variable name="text" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
+  <template name="todo" value="// TODO: $date$ $user$ - $todo$&#10;&#10;" description="// TODO: $date$ $todo$" toReformat="true" toShortenFQNames="true">
+    <variable name="date" expression="date()" defaultValue="dd/MM/yyyy" alwaysStopAt="true" />
+    <variable name="user" expression="user()" defaultValue="" alwaysStopAt="true" />
+    <variable name="todo" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
+  <template name="testClass" value="package $package$&#10;&#10;import es.tcg.punchinapp.BaseTest&#10;import io.mockk.verify&#10;&#10;class HistoryTestTest : BaseTest() {&#10;&#9;init {&#10;&#9;&#9;//val mView = mockk&lt;SplashView&gt;()&#10;&#10;&#9;&#9;Given(&quot;&quot;) {&#10;&#9;&#9;&#9;When(&quot;&quot;) {&#10;&#9;&#9;&#9;&#9;Then(&quot;&quot;) {&#10;&#9;&#9;&#9;&#9;&#9;verify(exactly = 1) {&#10;&#10;&#9;&#9;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;&#9;&#9;verify(exactly = 0) {&#10;&#10;&#9;&#9;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;}&#10;&#9;&#9;}&#10;&#9;}&#10;}" description="Test Class" toReformat="true" toShortenFQNames="true">
+    <variable name="package" expression="kotlinPackageName()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
+  <template name="baseViewModelClass" value="package $package$&#10;&#10;import androidx.lifecycle.ViewModel&#10;import io.reactivex.disposables.CompositeDisposable&#10;&#10;open class BaseViewModel : ViewModel() {&#10;&#10;    val compositeDisposable: CompositeDisposable = CompositeDisposable()&#10;&#10;    override fun onCleared() {&#10;        super.onCleared()&#10;        compositeDisposable.clear()&#10;    }&#10;}" description="BaseViewModel Class" toReformat="true" toShortenFQNames="true">
+    <variable name="package" expression="kotlinPackageName()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
+  <template name="baseFragmentClass" value="package $package$&#10;&#10;import android.app.ProgressDialog&#10;import android.widget.Toast&#10;import androidx.fragment.app.Fragment&#10;import com.google.android.gms.analytics.HitBuilders&#10;import com.saludonnet.pacientes.R&#10;import com.saludonnet.pacientes.util.AnalyticsTrackers&#10;&#10;open class BaseFragment : Fragment(), BaseView {&#10;&#10;&#9;override fun dismissProgressDialog() {&#10;&#9;&#9;if (isAdded) {&#10;&#9;&#9;&#9;(activity as BaseActivity).dismissProgressDialog()&#10;&#9;&#9;}&#10;&#9;}&#10;&#10;&#9;fun showProgressDialog(title: String, description: String): ProgressDialog? {&#10;&#9;&#9;return (activity as BaseActivity).showProgressDialog(title, description)&#10;&#9;}&#10;&#10;&#9;override fun showGenericErrorAlert() {&#10;&#9;&#9;if (isAdded) {&#10;&#9;&#9;&#9;Toast.makeText(&#10;&#9;&#9;&#9;&#9;activity,&#10;&#9;&#9;&#9;&#9;this.getString(R.string.generic_error_message),&#10;&#9;&#9;&#9;&#9;Toast.LENGTH_LONG&#10;&#9;&#9;&#9;).show()&#10;&#9;&#9;}&#10;&#9;}&#10;&#10;&#9;override fun finishActivity() {&#10;&#9;&#9;activity?.finish()&#10;&#9;}&#10;&#10;&#9;override fun onResume() {&#10;&#9;&#9;super.onResume()&#10;&#9;&#9;AnalyticsTrackers.getTracker()?.setScreenName(javaClass.simpleName)&#10;&#9;&#9;AnalyticsTrackers.getTracker()?.send(HitBuilders.ScreenViewBuilder().build())&#10;&#9;}&#10;&#10;&#9;override fun onPause() {&#10;&#9;&#9;super.onPause()&#10;&#9;&#9;dismissProgressDialog()&#10;&#9;}&#10;}" description="BaseFragment Class" toReformat="true" toShortenFQNames="true">
+    <variable name="package" expression="kotlinPackageName()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
+  <template name="baseActivityClass" value="package $package$&#10;&#10;import android.app.ProgressDialog&#10;import android.os.Bundle&#10;import android.widget.Toast&#10;import androidx.appcompat.app.AppCompatActivity&#10;import androidx.appcompat.widget.Toolbar&#10;import com.google.android.gms.analytics.HitBuilders&#10;import com.saludonnet.pacientes.R&#10;import com.saludonnet.pacientes.util.AnalyticsTrackers&#10;&#10;abstract class BaseActivity : AppCompatActivity(), BaseView {&#10;&#10;&#9;abstract val layoutId: Int&#10;&#9;abstract val toolbarView: Toolbar?&#10;&#9;private var mProgressDialog: ProgressDialog? = null&#10;&#10;&#9;override fun onCreate(savedInstanceState: Bundle?) {&#10;&#9;&#9;super.onCreate(savedInstanceState)&#10;&#10;&#9;&#9;setContentView(layoutId)&#10;&#9;&#9;setSupportActionBar(toolbarView)&#10;&#9;}&#10;&#10;&#9;override fun dismissProgressDialog() {&#10;&#9;&#9;if (mProgressDialog != null &amp;&amp; mProgressDialog?.isShowing!!) {&#10;&#9;&#9;&#9;mProgressDialog?.dismiss()&#10;&#9;&#9;}&#10;&#9;}&#10;&#10;&#9;fun showProgressDialog(title: String, description: String): ProgressDialog? {&#10;&#9;&#9;if (mProgressDialog != null &amp;&amp; mProgressDialog?.isShowing!!) {&#10;&#9;&#9;&#9;dismissProgressDialog()&#10;&#9;&#9;}&#10;&#9;&#9;mProgressDialog = ProgressDialog.show(this, title, description, true)&#10;&#10;&#9;&#9;return mProgressDialog&#10;&#9;}&#10;&#10;&#9;override fun showGenericErrorAlert() {&#10;&#9;&#9;Toast.makeText(this, this.getString(R.string.generic_error_message), Toast.LENGTH_LONG)&#10;&#9;&#9;&#9;.show()&#10;&#9;}&#10;&#10;&#9;override fun finishActivity() {&#10;&#9;&#9;finish()&#10;&#9;}&#10;&#10;&#9;override fun onResume() {&#10;&#9;&#9;super.onResume()&#10;&#9;&#9;AnalyticsTrackers.getTracker()?.setScreenName(javaClass.simpleName)&#10;&#9;&#9;AnalyticsTrackers.getTracker()?.send(HitBuilders.ScreenViewBuilder().build())&#10;&#9;}&#10;&#10;&#9;override fun onPause() {&#10;&#9;&#9;super.onPause()&#10;&#9;&#9;dismissProgressDialog()&#10;&#9;}&#10;&#10;&#9;override fun onDestroy() {&#10;&#9;&#9;super.onDestroy()&#10;&#9;&#9;dismissProgressDialog()&#10;&#9;}&#10;}" description="BaseActivity Class" toReformat="true" toShortenFQNames="true">
+    <variable name="package" expression="kotlinPackageName()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
+  <template name="testGiven" value="Given(&quot;$given$&quot;) {&#10;    When(&quot;$when$&quot;) {&#10;        Then(&quot;$then$&quot;){&#10;            verify(exactly = 1) {&#10;&#10;            }&#10;            verify(exactly = 0) {&#10;        &#10;            }&#10;        }&#10;    }&#10;}" description="Behavior test, Given" toReformat="true" toShortenFQNames="true">
+    <variable name="given" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="when" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="then" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
+  <template name="testWhen" value="When(&quot;$when$&quot;) {&#10;    Then(&quot;$then$&quot;){&#10;        verify(exactly = 1) {&#10;&#10;        }&#10;        verify(exactly = 0) {&#10;    &#10;        }&#10;    }&#10;}" description="Behavior test, When" toReformat="true" toShortenFQNames="true">
+    <variable name="when" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="then" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
+  <template name="testThen" value="Then(&quot;$then$&quot;) {&#10;    verify(exactly = 1) {&#10;&#10;    }&#10;    verify(exactly = 0) {&#10;&#10;    }&#10;}" description="Behavior test, Then" toReformat="true" toShortenFQNames="true">
+    <variable name="then" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
+  <template name="activityMvvm" value="package $package$&#10;&#10;import android.os.Bundle&#10;import androidx.appcompat.widget.Toolbar&#10;import androidx.navigation.findNavController&#10;import androidx.navigation.ui.AppBarConfiguration&#10;import androidx.navigation.ui.NavigationUI&#10;import androidx.navigation.ui.navigateUp&#10;&#10;/**&#10; * Created by Sergio Crespo Toubes on $date$.&#10; *     SergioCrespoToubes@gmail.com&#10; *     www.SergioCrespoToubes.com&#10; */&#10;&#10;abstract class $text$ : BaseActivity() {&#10;&#10;&#9;override val layoutId: Int = R.layout.$text$&#10;&#9;override val toolbarView: Toolbar&#10;&#9;&#9;get() = toolbar&#10;&#10;&#9;private lateinit var appBarConfiguration: AppBarConfiguration&#10;&#10;&#9;override fun onCreate(savedInstanceState: Bundle?) {&#10;&#9;&#9;super.onCreate(savedInstanceState)&#10;&#10;&#9;&#9;loadAppbar()&#10;&#9;}&#10;&#10;&#9;private fun loadAppbar() {&#10;&#9;&#9;val navController = findNavController(R.id.nav_host_fragment)&#10;&#9;&#9;appBarConfiguration = AppBarConfiguration(navController.graph)&#10;&#9;&#9;setSupportActionBar(toolbar)&#10;&#10;&#9;&#9;val abc = AppBarConfiguration.Builder().build()&#10;&#9;&#9;NavigationUI.setupActionBarWithNavController(this, navController, abc)&#10;&#9;&#9;AppBarConfiguration.Builder().setFallbackOnNavigateUpListener {&#10;&#9;&#9;&#9;super.onSupportNavigateUp()&#10;&#9;&#9;}.build()&#10;&#9;}&#10;&#10;&#9;override fun onSupportNavigateUp(): Boolean {&#10;&#9;&#9;val navController = findNavController(R.id.nav_host_fragment)&#10;&#9;&#9;return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()&#10;&#9;}&#10;}" description="Activity MVVM Class" toReformat="true" toShortenFQNames="true">
+    <variable name="package" expression="kotlinPackageName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="date" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="text" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
+  <template name="viewModelMvvm" value="package $package$&#10;&#10;/**&#10; * Created by Sergio Crespo Toubes on $date$.&#10; *     SergioCrespoToubes@gmail.com&#10; *     www.SergioCrespoToubes.com&#10; */&#10;&#10;class $text$ViewModel() : BaseViewModel() {&#10;&#10;    //val data = MutableLiveData&lt;Unit&gt;()&#10;&#10;}" description="ViewModel MVVM Class" toReformat="true" toShortenFQNames="true">
+    <variable name="package" expression="kotlinPackageName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="date" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="text" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
+  <template name="fragmentMvvm" value="package $package$&#10;&#10;import org.koin.core.inject&#10;&#10;/**&#10; * Created by Sergio Crespo Toubes on $date$.&#10; *     SergioCrespoToubes@gmail.com&#10; *     www.SergioCrespoToubes.com&#10; */&#10;&#10;abstract class $text$ : BaseFragment() {&#10;&#10;&#9;//private val mPresenter: CalculatorDiseasesPresenter by inject()&#10;&#10;&#9;override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {&#10;&#9;&#9;super.onCreateView(inflater, container, savedInstanceState)&#10;&#9;&#9;return inflater.inflate(R.layout.$text$, container, false)&#10;&#9;}&#10;&#10;&#9;override fun onActivityCreated(savedInstanceState: Bundle?) {&#10;&#9;&#9;super.onActivityCreated(savedInstanceState)&#10;&#10;&#9;&#9;loadViews()&#10;&#9;&#9;loadObservers()&#10;&#9;}&#10;&#10;    private fun loadViews(){&#10;    &#10;    }&#10;    &#10;    private fun loadObservers(){&#10;&#9;&#9;/*vModel.hideProgressDialog.observe(this, Observer {&#10;&#9;&#9;&#9;hideProgressDialog()&#10;&#9;&#9;})*/&#10;&#9;}&#10;}" description="Fragment MVVM Class" toReformat="true" toShortenFQNames="true">
+    <variable name="package" expression="kotlinPackageName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="date" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="text" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
+  <template name="observerEvent" value="vModel.$observer$.observe(requireActivity(), EventObserver {&#10;    $text$&#10;})" shortcut="TAB" description="EventObserver" toReformat="false" toShortenFQNames="true">
+    <variable name="observer" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="text" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
+  <template name="observer" value="vModel.$observer$.observe(requireActivity(), Observer {&#10;    $text$&#10;})" shortcut="TAB" description="Observer" toReformat="false" toShortenFQNames="true">
+    <variable name="observer" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="text" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
+  <template name="header" value="/**&#10; * Created by Sergio Crespo Toubes on $date$.&#10; *     SergioCrespoToubes@gmail.com&#10; *     www.SergioCrespoToubes.com&#10; */" description="Header Sergio Crespo Toubes" toReformat="true" toShortenFQNames="true">
+    <variable name="date" expression="date()" defaultValue="dd/MM/yyyy" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
+  <template name="groupie" value="import com.xwray.groupie.GroupAdapter&#10;import com.xwray.groupie.GroupieViewHolder&#10;&#10;private val groupAdapter = GroupAdapter&lt;GroupieViewHolder&gt;()&#10;&#10;$recycler$.apply {&#10;    layoutManager = LinearLayoutManager(this@$activity$)&#10;    adapter = groupAdapter&#10;}&#10;&#10;override fun $method$($name$s: Resource&lt;List&lt;$name$&gt;&gt;) {&#10;    when ($name$s.status) {&#10;        Resource.Status.SUCCESS -&gt; {&#10;            groupAdapter.clear()&#10;            val $name$Items = $name$s.data?.map { notification -&gt;&#10;                // TODO:&#10;                // $name$Item&#10;            } ?: emptyList()&#10;            groupAdapter.addAll(specialtiesItems)&#10;            &#10;            if ($name$Items.isEmpty()) {&#10;                viewStatesSwitcher.empty()&#10;            } else {&#10;                viewStatesSwitcher.success()&#10;            }&#10;        }&#10;        Resource.Status.ERROR -&gt; viewStatesSwitcher.error()&#10;        Resource.Status.LOADING -&gt; {&#10;            viewStatesSwitcher.loading()&#10;        }&#10;    }&#10;}" description="Groupie adapter generator" toReformat="true" toShortenFQNames="true">
+    <variable name="recycler" expression="" defaultValue="recycler" alwaysStopAt="true" />
+    <variable name="activity" expression="kotlinClassName()" defaultValue="activity" alwaysStopAt="true" />
+    <variable name="method" expression="" defaultValue="method" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="name" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
+  <template name="loadObservers" value="private fun loadObservers(){&#10;    vModel.showServicesGroupObs.observe(this, EventObserver {&#10;        showSpecialtyListView()&#10;    })&#10;}" description="Load Observers method" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
+</templateSet>

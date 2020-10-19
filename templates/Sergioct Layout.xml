@@ -1,0 +1,204 @@
+<templateSet group="Sergioct Layout">
+  <template name="llv" value="&lt;LinearLayout&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;wrap_content&quot;&#10;    android:orientation=&quot;vertical&quot;&gt;&#10;    &#10;    $text$&#10;    &#10;&lt;/LinearLayout&gt;" description="Linear Layout Vertical" toReformat="false" toShortenFQNames="true">
+    <variable name="text" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="llh" value="&lt;LinearLayout&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;wrap_content&quot;&#10;    android:orientation=&quot;horizontal&quot;&gt;&#10;    &#10;    $text$&#10;    &#10;&lt;/LinearLayout&gt;" description="Linear Layout Horizontal" toReformat="false" toShortenFQNames="true">
+    <variable name="text" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="rl" value="&lt;RelativeLayout&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;wrap_content&quot;&gt;&#10;    &#10;    $text$&#10;    &#10;&lt;/RelativeLayout&gt;" description="Relative Layout" toReformat="false" toShortenFQNames="true">
+    <variable name="text" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="rv" value="&lt;androidx.recyclerview.widget.RecyclerView&#10;    android:id=&quot;@+id/$id$&quot;&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;match_parent&quot;&#10;    app:layoutManager=&quot;androidx.recyclerview.widget.LinearLayoutManager&quot;&#10;    tools:listitem=&quot;@android:layout/activity_list_item&quot;/&gt;" description="RecyclerView LinearLayoutManager" toReformat="false" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="margins" value="android:layout_marginTop=&quot;$margin$&quot;&#10;android:layout_marginBottom=&quot;$margin$&quot;&#10;android:layout_marginStart=&quot;$margin$&quot;&#10;android:layout_marginEnd=&quot;$margin$&quot;" description="All margins" toReformat="false" toShortenFQNames="true">
+    <variable name="margin" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="paddings" value="android:paddingTop=&quot;$margin$&quot;&#10;android:paddingBottom=&quot;$margin$&quot;&#10;android:paddingStart=&quot;$margin$&quot;&#10;android:paddingEnd=&quot;$margin$&quot;" description="All paddings" toReformat="false" toShortenFQNames="true">
+    <variable name="margin" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="ripple_foreground" value="android:clickable=&quot;true&quot;&#10;android:focusable=&quot;true&quot;&#10;android:longClickable=&quot;true&quot;&#10;android:foreground=&quot;?android:attr/selectableItemBackground&quot;" description="Button Ripple animation" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="et" value="&lt;com.google.android.material.textfield.TextInputLayout&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;wrap_content&quot;&#10;    android:hint=&quot;@string/$hint$&quot;&#10;    tools:hint=&quot;@tools:sample/lorem&quot;&gt;&#10;&#10;    &lt;EditText&#10;        android:id=&quot;@+id/$text$&quot;&#10;        android:layout_width=&quot;match_parent&quot;&#10;        android:layout_height=&quot;wrap_content&quot;&#10;        android:inputType=&quot;$inputType$&quot;/&gt;&#10;&#10;&lt;/com.google.android.material.textfield.TextInputLayout&gt;" description="EditText with Text Input Layout" toReformat="false" toShortenFQNames="true">
+    <variable name="hint" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="text" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="inputType" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="iv" value="&lt;ImageView&#10;    android:id=&quot;@+id/$text$&quot;&#10;    android:layout_width=&quot;48dp&quot;&#10;    android:layout_height=&quot;48dp&quot;&#10;    app:srcCompat=&quot;@drawable/$drawable$&quot;&#10;    tools:srcCompat=&quot;@tools:sample/avatars&quot;/&gt;" description="ImageView vector" toReformat="false" toShortenFQNames="true">
+    <variable name="text" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="drawable" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="ivd" value="&lt;ImageView&#10;    android:id=&quot;@+id/$id$&quot;&#10;    android:layout_width=&quot;wrap_content&quot;&#10;    android:layout_height=&quot;wrap_content&quot;&#10;    android:src=&quot;@drawable/$drawable$&quot;&#10;    tools:src=&quot;@tools:sample/backgrounds/scenic&quot;/&gt;" description="ImageView drawable" toReformat="false" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="drawable" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="width" value="android:layout_width=&quot;$width$&quot;" description="android:layout_width=&quot;&quot;" toReformat="false" toShortenFQNames="true">
+    <variable name="width" expression="" defaultValue="wrap_content" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="height" value="android:layout_height=&quot;$height$&quot;" description="android:layout_height=&quot;&quot;" toReformat="false" toShortenFQNames="true">
+    <variable name="height" expression="" defaultValue="wrap_content" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="tv" value="&lt;TextView&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;wrap_content&quot;&#10;    android:text=&quot;$text$&quot;&#10;    tools:text=&quot;@tools:sample/lorem&quot;/&gt;" description="TextView" toReformat="false" toShortenFQNames="true">
+    <variable name="text" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="ripple_foreground_circle" value="android:clickable=&quot;true&quot;&#10;android:focusable=&quot;true&quot;&#10;android:longClickable=&quot;true&quot;&#10;android:foreground=&quot;?android:attr/selectableItemBackgroundBorderless&quot;" description="Button Ripple circle animation, api 21" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="til_et_son" value="&lt;com.google.android.material.textfield.TextInputLayout&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;wrap_content&quot;&#10;    android:hint=&quot;@string/$hint$&quot;&#10;    tools:hint=&quot;@tools:sample/lorem&quot;&gt;&#10;&#10;    &lt;com.google.android.material.textfield.TextInputEditText&#10;        android:id=&quot;@+id/$id$&quot;&#10;        android:layout_width=&quot;match_parent&quot;&#10;        android:layout_height=&quot;wrap_content&quot;&#10;        android:inputType=&quot;$inputType$&quot;&#10;        android:drawableLeft=&quot;@drawable/$drawable$&quot;&#10;        android:drawableStart=&quot;@drawable/$drawable$&quot;&#10;        android:drawablePadding=&quot;@dimen/default_padding&quot;&#10;        style=&quot;@style/SONEditText&quot;/&gt;&#10;&#10;&lt;/com.google.android.material.textfield.TextInputLayout&gt;" description="EditText with Text Input Layout" toReformat="false" toShortenFQNames="true">
+    <variable name="hint" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="drawable" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="inputType" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="card" value="&lt;androidx.cardview.widget.CardView&#10;    android:id=&quot;@+id/$id$&quot;&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;wrap_content&quot;&#10;    app:cardBackgroundColor=&quot;@color/colorCellBackground&quot;&#10;    card_view:cardUseCompatPadding=&quot;true&quot;&gt;&#10;    &#10;    $text$&#10;    &#10;&lt;/androidx.cardview.widget.CardView&gt;" description="CardView" toReformat="false" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="text" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="id" value="android:id=&quot;@+id/$id$&quot;" description="id" toReformat="false" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="ms" value="android:layout_marginStart=&quot;$margin$&quot;" description="Margin Start" toReformat="false" toShortenFQNames="true">
+    <variable name="margin" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="me" value="android:layout_marginEnd=&quot;$margin$&quot;" description="Margin End" toReformat="false" toShortenFQNames="true">
+    <variable name="margin" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="ps" value="android:paddingStart=&quot;$margin$&quot;" description="Padding Start" toReformat="false" toShortenFQNames="true">
+    <variable name="margin" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="pe" value="android:paddingStart=&quot;$margin$&quot;" description="Padding End" toReformat="false" toShortenFQNames="true">
+    <variable name="margin" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="til_et" value="&lt;com.google.android.material.textfield.TextInputLayout&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;wrap_content&quot;&#10;    android:hint=&quot;@string/$hint$&quot;&#10;    tools:hint=&quot;@tools:sample/lorem&quot;&gt;&#10;&#10;    &lt;com.google.android.material.textfield.TextInputEditText&#10;        android:id=&quot;@+id/$id$&quot;&#10;        android:layout_width=&quot;match_parent&quot;&#10;        android:layout_height=&quot;wrap_content&quot;&#10;        android:inputType=&quot;$inputType$&quot;/&gt;&#10;&#10;&lt;/com.google.android.material.textfield.TextInputLayout&gt;" description="EditText with Text Input Layout" toReformat="false" toShortenFQNames="true">
+    <variable name="hint" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="inputType" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="lww" value="android:layout_width=&quot;wrap_content&quot;" description="Layout Width &quot;wrap_content&quot;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="lhm" value="android:layout_height=&quot;match_parent&quot;" description="Layout Height &quot;match_parent&quot;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="lwm" value="android:layout_width=&quot;match_parent&quot;" description="Layout Width &quot;match_parent&quot;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="lh" value="android:layout_height=&quot;$height$&quot;" description="Layout Height" toReformat="false" toShortenFQNames="true">
+    <variable name="height" expression="" defaultValue="wrap_content" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="lw" value="android:layout_width=&quot;$width$&quot;" description="Layout Width" toReformat="false" toShortenFQNames="true">
+    <variable name="width" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="tvah" value="&lt;androidx.appcompat.widget.AppCompatTextView&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;match_parent&quot;&#10;    tools:text=&quot;@tools:sample/lorem&quot;&#10;    android:autoSizeTextType=&quot;uniform&quot;&#10;    android:autoSizeMaxTextSize=&quot;40sp&quot;&#10;    app:autoSizeTextType=&quot;uniform&quot;&#10;    app:autoSizeMaxTextSize=&quot;40sp&quot;/&gt;" description="TextView Auto Height" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gone" value="android:visibility=&quot;gone&quot;&#10;" description="Gone view" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="visible" value="android:visibility=&quot;visible&quot;&#10;" description="Visible view" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="hidden" value="android:visibility=&quot;hidden&quot;&#10;" description="Hidden view" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="custom" value="xmlns:custom=&quot;http://schemas.android.com/apk/res-auto&quot;" description="xmlns:custom=&quot;http://schemas.android.com/apk/res-auto&quot;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="tools" value="xmlns:tools=&quot;http://schemas.android.com/tools&quot;" description="xmlns:tools=&quot;http://schemas.android.com/tools&quot;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="vss" value="&lt;com.sergiocrespotoubes.viewstatesswitcherlib.ViewStatesSwitcher&#10;    android:id=&quot;@+id/viewStatesSwitcher&quot;&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;match_parent&quot;&#10;    android:gravity=&quot;center_vertical&quot;&#10;    android:layout_gravity=&quot;center_vertical&quot;&#10;    tools:state=&quot;idle&quot;&#10;    custom:state=&quot;loading&quot;&#10;    custom:successView=&quot;@+id/data&quot;&#10;    custom:emptyView=&quot;@+id/noDataLinear&quot;&#10;    custom:errorView=&quot;@+id/error&quot;&#10;    custom:loadingView=&quot;@+id/loading&quot;&gt;&#10;&#10;    &lt;TextView&#10;        android:id=&quot;@+id/data&quot;&#10;        android:layout_width=&quot;match_parent&quot;&#10;        android:layout_height=&quot;wrap_content&quot;&#10;        tools:text=&quot;@tools:sample/lorem&quot;/&gt;&#10;&#10;    &lt;include android:id=&quot;@+id/loading&quot; layout=&quot;@layout/include_loading&quot;/&gt;&#10;    &lt;include android:id=&quot;@+id/error&quot; layout=&quot;@layout/include_error&quot;/&gt;&#10;    &lt;include android:id=&quot;@+id/noDataLinear&quot; layout=&quot;@layout/include_empty&quot;/&gt;&#10;&#10;&lt;/com.sergiocrespotoubes.viewstatesswitcherlib.ViewStatesSwitcher&gt;" description="ViewStatesSwitcher" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+</templateSet>
