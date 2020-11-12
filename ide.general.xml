@@ -18,6 +18,7 @@
     <entry key="ide.balloon.shadow.size" value="0" />
     <entry key="ide.svg.icon" value="true" />
     <entry key="ide.tree.ui.experimental" value="false" />
+    <entry key="external.system.auto.import.disabled" value="true" />
   </component>
   <component name="StatusBar">
     <option name="widgets">
