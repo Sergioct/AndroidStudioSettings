@@ -1,4 +1,5 @@
 <code_scheme name="Default" version="173">
+  <option name="AUTODETECT_INDENTS" value="false" />
   <option name="CLASS_COUNT_TO_USE_IMPORT_ON_DEMAND" value="99" />
   <option name="NAMES_COUNT_TO_USE_IMPORT_ON_DEMAND" value="99" />
   <option name="PACKAGES_TO_USE_IMPORT_ON_DEMAND">
@@ -26,19 +27,13 @@
       <emptyLine />
     </value>
   </option>
+  <AndroidXmlCodeStyleSettings>
+    <option name="ARRANGEMENT_SETTINGS_MIGRATED_TO_191" value="true" />
+  </AndroidXmlCodeStyleSettings>
   <JetCodeStyleSettings>
     <option name="PACKAGES_TO_USE_STAR_IMPORTS">
       <value>
-        <package name="kotlinx.android.synthetic" alias="false" withSubpackages="true" />
-      </value>
-    </option>
-    <option name="PACKAGES_IMPORT_LAYOUT">
-      <value>
-        <package name="" alias="false" withSubpackages="true" />
-        <package name="java" alias="false" withSubpackages="true" />
-        <package name="javax" alias="false" withSubpackages="true" />
-        <package name="kotlin" alias="false" withSubpackages="true" />
-        <package name="" alias="true" withSubpackages="true" />
+        <package name="kotlinx.android.synthetic" withSubpackages="true" static="false" />
       </value>
     </option>
     <option name="NAME_COUNT_TO_USE_STAR_IMPORT" value="2147483647" />
@@ -50,6 +45,11 @@
   <XML>
     <option name="XML_LEGACY_SETTINGS_IMPORTED" value="true" />
   </XML>
+  <codeStyleSettings language="JAVA">
+    <indentOptions>
+      <option name="TAB_SIZE" value="1" />
+    </indentOptions>
+  </codeStyleSettings>
   <codeStyleSettings language="XML">
     <indentOptions>
       <option name="CONTINUATION_INDENT_SIZE" value="4" />
@@ -167,12 +167,12 @@
     <option name="LINE_COMMENT_AT_FIRST_COLUMN" value="false" />
     <option name="LINE_COMMENT_ADD_SPACE" value="true" />
     <option name="KEEP_BLANK_LINES_IN_DECLARATIONS" value="1" />
+    <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
     <option name="KEEP_BLANK_LINES_BEFORE_RBRACE" value="0" />
-    <option name="ASSIGNMENT_WRAP" value="0" />
+    <option name="ALIGN_MULTILINE_PARAMETERS" value="false" />
     <indentOptions>
       <option name="CONTINUATION_INDENT_SIZE" value="4" />
       <option name="USE_TAB_CHARACTER" value="true" />
-      <option name="SMART_TABS" value="true" />
     </indentOptions>
   </codeStyleSettings>
 </code_scheme>

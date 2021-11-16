@@ -74,7 +74,7 @@
       <option name="XML" value="true" />
     </context>
   </template>
-  <template name="tv" value="&lt;TextView&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;wrap_content&quot;&#10;    android:text=&quot;$text$&quot;&#10;    tools:text=&quot;@tools:sample/lorem&quot;/&gt;" description="TextView" toReformat="false" toShortenFQNames="true">
+  <template name="tv" value="&lt;com.google.android.material.textview.MaterialTextView&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;wrap_content&quot;&#10;    android:text=&quot;$text$&quot;&#10;    tools:text=&quot;@tools:sample/lorem&quot;/&gt;" description="TextView" toReformat="false" toShortenFQNames="true">
     <variable name="text" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="XML" value="true" />

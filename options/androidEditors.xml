@@ -1,0 +1,14 @@
+<application>
+  <component name="AndroidEditors">
+    <option name="state">
+      <GlobalState>
+        <option name="preferXmlEditor" value="true" />
+        <option name="preferredComposableEditorMode" value="SPLIT" />
+        <option name="preferredDrawableEditorMode" value="CODE" />
+        <option name="preferredEditorMode" value="CODE" />
+        <option name="preferredKotlinEditorMode" value="CODE" />
+        <option name="showLint" value="true" />
+      </GlobalState>
+    </option>
+  </component>
+</application>
