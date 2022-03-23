@@ -1,9 +1,0 @@
-String Manipulation
-com.chrisrm.idea.MaterialThemeUI
-com.developerphil.adbidea
-com.kagof.pokeprogress
-kotest-plugin-intellij
-mobi.hsz.idea.gitignore
-net.vektah.codeglance
-org.jetbrains.kotlin
-org.sonarlint.idea
